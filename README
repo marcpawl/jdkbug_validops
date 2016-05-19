@@ -1,0 +1,8 @@
+#!/bin/bash -e
+# To run the test execute README
+# Using docker we setup a reproducible environment to
+# run the test case  src/test/java/test/ValidOpsTest
+docker build -t validops .
+docker run -it validops gradle-2.13/bin/gradle test
+
+
